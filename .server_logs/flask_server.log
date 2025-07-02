@@ -7,21 +7,21 @@
 [33mPress CTRL+C to quit[0m
 [DEBUG] [REQ] GET /contacts - Headers: {'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Host': 'localhost:3001', 'User-Agent': 'Mozilla/5.0 (Linux x64) node.js/18.20.6 v8/10.2.154.26-node.37', 'Content-Length': '0'}
 [DEBUG] [RESP] GET /contacts - Status: 308 PERMANENT REDIRECT - CORS headers: None
-127.0.0.1 - - [02/Jul/2025 09:03:13] "[32mGET /contacts HTTP/1.1[0m" 308 -
+127.0.0.1 - - [02/Jul/2025 09:03:56] "[32mGET /contacts HTTP/1.1[0m" 308 -
 [DEBUG] [REQ] GET /contacts/ - Headers: {'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Host': 'localhost:3001', 'User-Agent': 'Mozilla/5.0 (Linux x64) node.js/18.20.6 v8/10.2.154.26-node.37'}
 [DEBUG] GET request received at /contacts/
 [DEBUG] Loading contacts from /home/kavia/workspace/code-generation/quickcontact-56082-66cd8fe9/contact_saver_backend/app/routes/../../contacts_data.json
 [DEBUG] Data file does not exist; returning empty list.
 [DEBUG] Returning contacts list of size 0
 [DEBUG] [RESP] GET /contacts/ - Status: 200 OK - CORS headers: None
-127.0.0.1 - - [02/Jul/2025 09:03:13] "GET /contacts/ HTTP/1.1" 200 -
+127.0.0.1 - - [02/Jul/2025 09:03:56] "GET /contacts/ HTTP/1.1" 200 -
 [DEBUG] [REQ] GET /contacts - Headers: {'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Host': 'localhost:3001', 'User-Agent': 'Mozilla/5.0 (Linux x64) node.js/18.20.6 v8/10.2.154.26-node.37', 'Content-Length': '0'}
 [DEBUG] [RESP] GET /contacts - Status: 308 PERMANENT REDIRECT - CORS headers: None
-127.0.0.1 - - [02/Jul/2025 09:03:15] "[32mGET /contacts HTTP/1.1[0m" 308 -
+127.0.0.1 - - [02/Jul/2025 09:03:58] "[32mGET /contacts HTTP/1.1[0m" 308 -
 [DEBUG] [REQ] GET /contacts/ - Headers: {'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Host': 'localhost:3001', 'User-Agent': 'Mozilla/5.0 (Linux x64) node.js/18.20.6 v8/10.2.154.26-node.37'}
 [DEBUG] GET request received at /contacts/
 [DEBUG] Loading contacts from /home/kavia/workspace/code-generation/quickcontact-56082-66cd8fe9/contact_saver_backend/app/routes/../../contacts_data.json
 [DEBUG] Data file does not exist; returning empty list.
 [DEBUG] Returning contacts list of size 0
 [DEBUG] [RESP] GET /contacts/ - Status: 200 OK - CORS headers: None
-127.0.0.1 - - [02/Jul/2025 09:03:15] "GET /contacts/ HTTP/1.1" 200 -
+127.0.0.1 - - [02/Jul/2025 09:03:58] "GET /contacts/ HTTP/1.1" 200 -
