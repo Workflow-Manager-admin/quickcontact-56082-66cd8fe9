@@ -6,6 +6,7 @@ from flask_smorest import Api
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
+print("[DEBUG] Flask app initialized - CORS configured for all origins.")
 app.config["API_TITLE"] = "Contact Saver Backend"
 app.config["API_VERSION"] = "v1"
 app.config["OPENAPI_VERSION"] = "3.0.3"
