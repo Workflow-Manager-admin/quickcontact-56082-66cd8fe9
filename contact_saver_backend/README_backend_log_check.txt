@@ -39,3 +39,20 @@ F. Check for incoming frontend requests and CORS/errors:
 5. If requests do not show in the logs at all, double-check network settings, container interconnectivity, and that the frontend is targeting the correct backend URL (should be http://localhost:3001/contacts or the correct host:port).
 
 Use 'tail -n 60' or 'less' on the running terminal's stdout from the Flask server. The relevant log statements should make debugging straightforward.
+
+# Backend investigation - Results:
+
+- Flask server startup is managed via contact_saver_backend/run.py, which runs on host 0.0.0.0 and port 3001 (debug True for log verbosity).
+- The main endpoints, /contacts/ and /contacts/<contact_id>, are registered using Flask-Smorest blueprints in app/routes/contacts.py and included in the Api(app) via app/__init__.py.
+- CORS is configured for all origins (*) with supports_credentials=True, which allows requests from all frontend sources during development.
+- Each API request logs pre- and post- details ([DEBUG] [REQ] and [DEBUG] [RESP]) including headers and CORS status, allowing investigation of any network or CORS issues via backend logs.
+- Visiting http://localhost:3001/docs or /openapi.json shows OpenAPI/Swagger documentation confirming route registration.
+- If GET/POST/DELETE requests to /contacts/ do not produce logs, the likely causes are: frontend using a wrong endpoint URL/port, backend not running, or a misconfigured frontend CORS request.
+
+Summary of confirmation steps:
+1. Confirmed backend is set to listen on :3001 and CORS is permissive.
+2. /contacts and /contacts/<id> routes are present and registered in Flask-Smorest.
+3. All requests (including failed/cross-origin ones) will be logged at debug level.
+4. No separate backend log file—inspect running server's console for logs and errors.
+5. If issues persist, re-check connectivity from the frontend (correct port, address, and protocol).
+
